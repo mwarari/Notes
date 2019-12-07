@@ -1,0 +1,6 @@
+This documention is for installing okd on a single server using rpms.
+====================================================================
+
+yum install wget git net-tools bind-utils yum-utils iptables-services bridge-utils bash-completion kexec-tools sos psacct
+sudo yum install atomic
+
