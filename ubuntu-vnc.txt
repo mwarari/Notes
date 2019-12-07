@@ -1,0 +1,15 @@
+How to install a vnc server on Ubuntu
+=====================================
+
+sudo apt install vnc4server xfce4 xfce4-goodies
+vncpasswd
+mkdir ~/.vnc
+vi ~/.vnc/xstartup
+
+Insert the following into the xstartup file.
+#!/bin/bash
+startxfce4 &
+
+chmod +x ~/.vnc/xstartup
+vnc4server
+sudo ufw allow from any to any port 5901 proto tcp
