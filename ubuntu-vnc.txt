@@ -7,9 +7,42 @@ mkdir ~/.vnc
 vi ~/.vnc/xstartup
 
 Insert the following into the xstartup file.
+............................................
 #!/bin/bash
 startxfce4 &
 
 chmod +x ~/.vnc/xstartup
 vnc4server
 sudo ufw allow from any to any port 5901 proto tcp
+
+Create a new unit file called /etc/systemd/system/vncserver@.service
+
+Add the folling into the file. (Change the entry 'sammy' below with the your username.)
+.......................................................................................
+[Unit]
+Description=Start VNC server at startup
+After=syslog.target network.target
+
+[Service]
+Type=forking
+User=sammy
+PAMName=login
+PIDFile=/home/sammy/.vnc/%H:%i.pid
+ExecStartPre=-/usr/bin/vncserver -kill :%i > /dev/null 2>&1
+ExecStart=/usr/bin/vncserver -depth 24 -geometry 1280x800 :%i
+ExecStop=/usr/bin/vncserver -kill :%i
+
+[Install]
+WantedBy=multi-user.target
+
+sudo systemctl daemon-reload
+
+sudo systemctl enable vncserver@1.service
+
+vncserver -kill :1
+
+sudo systemctl start vncserver@1
+
+sudo systemctl status vncserver@1
+
+
