@@ -1,0 +1,1866 @@
+Fwww.accessline.
+5618073600
+5618456543
+
+imaragroup SQL serverIP: 209.132.230.69
+database: imaragroup
+username: phoneratesdb
+password: phoneratesdb1
+
+CREATE PROCEDURE merchant_add_client_card(
+	@merchantid  nvarchar(20),
+	@username nvarchar(20),
+	@ccno nvarchar(20),
+	@cctype nvarchar(20),
+	@cvv2 char(4),
+	@expirydate char(4),
+	@address nvarchar(20),
+	@zip nvarchar(9),
+	@magicno money,
+	@result numeric(9) OUTPUT
+) AS
+BEGIN
+	select @username = lower(@username)
+	if exists(SELECT 1 FROM TreasureBank..MerchantClientCards WHERE CCNo=@ccno)
+	BEGIN
+		select @result = 0
+		return 
+	END
+	INSERT INTO TreasureBank..MerchantClientCards (MerchantID, Username, CCNo, CCType, CVV2, ExpiryDate, Address, Zip, 
+		MagicNo) 
+	VALUES(@merchantid, @username, @ccno, @cctype, @cvv2, @expirydate, @address, @zip, @magicno)
+	select @result = 1
+	return 
+END
+GO
+
+CREATE PROCEDURE phoneratesdb.getCallingCardRates 
+AS
+BEGIN
+	SELECT * FROM CallingRates ORDER BY ID
+END
+
+209.132.230.69
+
+w2-mia.assurant.com/agentdesktop/customers/
+
+CREATE PROCEDURE merchant_add_client(
+	@merchantid nvarchar(20),
+	@username nvarchar(20),
+	@password nvarchar(20),
+	@name nvarchar(40),
+	@address1 nvarchar(40),
+	@address2 nvarchar(40),
+	@city nvarchar(40),
+	@province nvarchar(20),
+	@country nvarchar(20),
+	@day_telephone nvarchar(20),
+	@evening_telephone nvarchar(20),
+	@fax nvarchar(20),
+	@email nvarchar(255),
+	@security_question1 nvarchar(100),
+	@answer1 nvarchar(20),
+	@security_question2 nvarchar(100),
+	@answer2 nvarchar(20),
+	@result numeric(9) OUTPUT
+)  AS
+BEGIN
+	select @username = lower(@username)
+	select @password = lower(@password)
+	if exists(SELECT 1 FROM TreasureBank..MerchantClients WHERE Username=@username AND merchantid=@merchantid)
+	BEGIN		
+		select @result = -1
+		return
+	END
+	INSERT INTO TreasureBank..MerchantClients (MerchantID, Username, Password, Name, Address1, Address2, City, Province, Country, 
+		DayTelephone, EveningTelephone, Fax, Email, SecurityQuestion1, Answer1, SecurityQuestion2, Answer2) 
+	VALUES(@merchantid, @username, @password, @name, @address1, @address2, @city, @province, @country, @day_telephone,
+		@evening_telephone, @fax, @email, @security_question1, @answer1, @security_question2, @answer2)
+	
+	select @result = 0
+	return 0
+END
+
+GO
+
+UserID,
+ParentID,
+Name
+
+
+UserID
+FolderID
+DateReceived
+Subject
+From
+To
+CC
+Message
+
+4562 NW 90th Ave. sunrise, 33351
+Last Left. 
+
+9544610483 Esther.
+
+Laurie Wilson 7862215555
+
+3055103333 Nolia
+
+ncbendigo@aol.com
+
+Turnpike S exit Florida city S - Last exit on t pike.
+1st traffic ligh is palm dr. make right.
+8th ave. go left.
+get to stop sign...villas of palm bay.
+go to next stop sign make right then immediatel left.
+942 SW 8 place.
+
+chris@crewdiscount.com
+
+
+4693659158 James Orina
+
+Turnpike get off at exit 5
+make right
+go down 2 stop lights 147th ave.
+make left
+go to the end of the street at 29912
+
+Fulton, Illinois, Quad City International. MLI
+Midway, MDW
+Cedar Rapids, Iowa, CID.
+
+uhaul 200
+
+9076401
+
+Suggestions
+1. use confidential watermark
+2. 
+
+
+011254722607103
+
+AgentID NVARCHAR(10),
+AccountNumber NVARCHAR(255),
+Amount Money,
+Currency NVARCHAR(4),
+Country NVARCHAR(4),
+DepositBy NVARCHAR(255),
+DepositNo NVARCHAR(50),
+DepositMethod NVARCHAR(5),
+DateDeposited DateTime,
+DateUpdated DateTime,
+Status NVARCHAR(10)
+
+TREVOR THOMPSON BAD BALANCE AFTER REQUESTING CARD.
+
+ARTHUR BENETTE 2804 CANCELLATION OF MONEY TRANSFER.
+
+4403610010051333
+
+8585656263
+8582548468
+
+8886831000
+
+Cancelling money transfer tansaction shows the string send to cancel.
+Data in list for sender is random. Show in chronological order.
+The name of the recepient should also be displayed.
+When searching the money transfer code, it returns the transaction does not exist.
+
+1829399798
+011254722607103
+
+1378 - Geico 
+
+DNS Server for KENYAMART.COM:
+ 
+Primary DNS: ns4.dnsserver8.com
+Primary DNS IP: 66.186.25.6
+Secondary DNS: ns5.dnsserver8.com
+Secondary DNS IP: 66.102.135.218
+
+DNS Server for MYEMAILTOWEB.COM:
+ 
+Primary DNS: ns4.dnsserver8.com
+Primary DNS IP: 66.186.25.6
+Secondary DNS: ns5.dnsserver8.com
+Secondary DNS IP: 66.102.135.218
+
+DNS Server for BSECURITIES.COM:
+ 
+Primary DNS: ns4.dnsserver8.com
+Primary DNS IP: 66.186.25.6
+Secondary DNS: ns5.dnsserver8.com
+Secondary DNS IP: 66.102.135.218
+
+
+469 sea st. apt 5. 
+quincy, MA, 02169
+
+32286
+32578
+
+letmein
+l3tm31n
+
+13893
+
+ts0667@conexlite.assurant.net
+
+Ray FFrench
+Hosane Garvey
+Allen
+Debbie Nooks
+
+0010000019075439 0480 2864638955
+Jason James
+
+javascript:DoFunction('ShowSendFundsToReceiverBankAccount');
+javascript:DoFunction('ShowSendCashToCaribbean');
+
+13616
+
+https://w2.assurant.com/servlet/f60servlet?config=assurtrack_internet
+
+mike kaigia
+
+mickiekaiga@yahoo.com
+1575 Ridenour pkwy apt 1721
+kennesaw, ga, 30152
+
+Option A
+1. Save up to 3500.00 by end of Feb. 1500.00 from Sue and the rest from Moses.
+2. Put Sue's resume on Monster for a job in FL beginning in feb.
+3. Sue to take leave of absence from country wide for 4 months.
+4. End of Feb sue to move to Florida.
+5. Sue to start making arrangements to get citizenship.
+6. Once Sue has citizenship then get hooked.
+7. Stay in FL until possible to move to TX.
+
+Option B
+1. Sue to start making arrangements to get citizenship.
+2. Moses to put resume on Web looking for jobs in TX
+3. Once Moses has job move to TX.
+4. Moses to put condo on market for rent.
+
+919-638-1224 Francis Opore
+
+
+    
+debit_card := getDebitCardByID(Values['CARD_NUMBER']) ;
+debit_card: DebitCardRecord ;
+www.caribpay.com/ DoInetReloadDebitCard
+
+    * For transaction history, you should use either getcardtxns or getcardtxns_thin
+    * For balance you should probably use getpurseacct_bycardnum.
+    * For loads and reloads, you should use CO_LoadValue.asp
+    * As per card number validation:  All of our calls assume that you are entering in a valid card number.  If the card number you enter is invalid, you will receive a message that the card number is invalid.  
+
+1428 - N-Via Card PIN
+
+DoInetGetDebitCardTransHistoryByCardNo
+
++ '<tr>' + #13
+        			+ '<td><font size=2>' + parseString(history_line, WCS_FIELD_DELIM, WCS_TX_POST_DATE) + '</font><td>' + #13
+        			+ '<td><font size=2>' + parseString(history_line, WCS_FIELD_DELIM, WCS_TX_REFERENCE) + '</font><td>' + #13
+        			+ '<td><font size=2>' + parseString(history_line, WCS_FIELD_DELIM, WCS_TX_DESCRIPTION) + '</font><td>' + #13
+        			//+ '<td><font size=2>' + parseString(history_line, WCS_FIELD_DELIM, WCS_TX_MERCHANT_NAME) + '</font><td>' + #13
+        			+ '<td><font size=2>' + parseString(history_line, WCS_FIELD_DELIM, WCS_TX_POST_AMOUNT) + '</font><td>' + #13
+        			+ '</tr>' + #13 ;
+        			
+5150860010030736
+
+
+30602516786668
+3050500026438038
+4212
+
+'0~
+2006-02-06 00:06:51.260|2006-02-06 00:06:51.260|50|50|Value Load|A2A ONLINE CLIENTS|US Secondary Card|Completed OK|<NULL>|0|False|CC0056DEDA37|840|50|{424D1F68-2811-4978-8E34-1D6B5338F639}|TxhValueLoad|2/6/2006 12:06:51 AM~
+2006-02-06 00:03:45.593|2006-02-06 00:03:45.593|50|50|Value Load|A2A ONLINE CLIENTS|US Secondary Card|Completed OK|<NULL>|0|False|CC00E28614FE|840|50|{79918FBA-C0DE-4273-A1E9-128A5F034A9C}|TxhValueLoad|2/6/2006 12:03:46 AM~
+2006-02-06 01:43:08.000|<NULL>|6.95|6.95|Purchase - Quick Payment Service, Fast Food Restaurants|MIAMI SUBS             FLORIDA CITY  FL|US Secondary Card|Completed OK|<NULL>|0|False|603701501386|840|6.95|{466EC2F7-B90D-4359-8CFF-E882FEC4E86E}|TxhOutstanding Purchase|2/5/2006 8:43:09 PM~
+2006-01-18 12:47:42.390|2006-01-18 12:47:42.390|50|50|Value Load|CUSTOMER SERVICE|US Secondary Card|Completed OK|Balance Adjustment|0|False|CC00F08F0173|840|50|{4B5C2D9F-9558-4538-B3E2-96B9402ED8BC}|TxhValueLoad|1/18/2006 12:47:42 PM
+
+2006-02-06 00:06:51.260 cc0056DEDa37
+
+http://www.caribpay.com/secure/nvia/AgentClient.exe
+NV14USR
+inetaccount
+
+NVia IPs
+201.240.252.225
+201.240.252.226
+201.240.252.227
+201.240.252.228
+201.240.252.229
+201.240.252.230
+
+
+southhub-u2-c3_0-68-70-5-168.miamfl.adelphia.net
+
+// Check the account balance
+        balance := GetCurrentMerchantTransactionAmount(
+                	g_merchant_record.merchantid) ;
+                	
+if balance < AmountEb.Value then
+            	begin
+                	errormessage := 'There is not enough funds in the account to satisfy the reload request.' + #13
+                		+ 'Current balance is: ' + FormatCurr('$0.00', balance) ;
+                	MessageDlg(errormessage, mtError, [mbOk], 0) ;
+                	BillingDataModule.rollbackTransaction ;
+                	exit ;
+            	end ;
+            	
+    fee := getTransactionFee(g_merchant_record.merchantid, DEBIT_CARD_RELOAD_FEE, AmountEb.Value,
+		'Debit Card Reload Fee', g_merchant_record.primary_currency, ANY_COUNTRY_FEE) ;
+           
+	balance := balance - fee ;
+
+				transaction_id := generateUniqueID ;
+            	InsertMerchantTransaction(GenerateUniqueID, transaction_id, Date,
+                	Time, g_merchant_record.merchantid, STANDARD_MERCHANT_FEE, order_fee,
+                	'Debit Card reload fee',
+                	RCD_ACTIVE, balance, cashier_record.getRetailAgent, agent_record.name,
+                	agent_record.branch) ;
+                	
+                InsertMerchantWithdrawalRecord(transaction_id, g_merchant_record.merchantid,
+                	Date, Time, fee,
+                	'', RCD_ACTIVE, '') ;
+
+            	balance := balance - AmountEb.Value ;
+            	InsertMerchantTransaction(GenerateUniqueID, transaction_id, Date,
+                	Time, g_merchant_record.merchantid,
+                	ACCOUNT_WITHDRAWAL, AmountEb.Value, 'CaribPay Visa reload ',
+                	RCD_ACTIVE, balance, cashier_record.getRetailAgent, agent_record.name,
+                	agent_record.branch) ;
+            	
+            	InsertMerchantWithdrawalRecord(transaction_id, g_merchant_record.merchantid,
+                	Date, Time, AmountEb.Value,
+                	'', RCD_ACTIVE, '') ;                	
+                	
+DoInetWildCardAccountSearch              	
+
+https://a2a.wildcardsystems.com/a2a/CO_Account_Search.asp?userid=a2a16589&pwd=treasure&sourceid=38&subprogid=4556&clientid=16589&packageid=1736&languageid=99&purseno=14&firstname=Moses&lasttname=Moses&Clientid=16589&Cardnum=5150860010030736
+
+0~
+5150860010030736 - Card Number
+|2 - Status
+|ACTIVE - Status Description
+|21250505 - PersonID
+|MOSES - First Name
+|MAINA - Last Name
+| - Other Info
+|999999999 - SSN
+|0 -Relation
+|ASIX - Client Name
+|4315 - SubProgid
+|US Secondary Card - Card Type
+|1643 - Package ID
+|ASIX MT- Package Description
+|U.S. Dollar - Currency Name
+|2 - Currency Minor
+|USD - Currency Alpha
+| - Middle Name
+|224 DATURA STREET - Addr 1
+|SUITE 506 - Addr 2
+|WEST PALM BEACH - City
+|FL - State
+|33401 - Zip
+|5618456543 - VoiceNum
+| - Ext
+| - Email
+|5/10/1971 - BirthDate
+|ASIX Money Transfer - Program Name
+|
+|
+|
+|5150860010030736 - Account TRN
+
+2006-02-23 00:33:56.620|2006-02-22 19:33:56.620|0.75|0.75|Balance Adjustment Debit Cardholder|A2A ONLINE CLIENTS|US Secondary Card|Completed OK|<NULL>|0|False|CC00FDEFEACC|840|0.75|{53E23FC9-F0E3-43E5-976E-E563C365F833}|TxhAdjustment|2/22/2006 7:33:57 PM~
+2006-02-22 19:33:34.610|2006-02-22 19:33:34.610|50|50|Value Load|A2A ONLINE CLIENTS|US Secondary Card|Completed OK|<NULL>|0|False|CC00DB1F559C|840|50|{BD807226-0256-4341-9A0F-FA17D7F7752A}|TxhValueLoad|2/22/2006 7:33:35 PM~
+2006-02-22 19:21:26.000|2006-02-22 19:21:26.000|50|50|Value Load|A2A ONLINE CLIENTS|US Secondary Card|Completed OK|<NULL>|0|False|CC0044278D48|840|50|{A3173E31-40D4-440F-8A02-0EE6F9342661}|TxhValueLoad|2/22/2006 7:21:26 PM~
+2006-02-22 18:40:27.537|2006-02-22 18:40:27.537|50|50|Value Load|A2A ONLINE CLIENTS|US Secondary Card|Completed OK|<NULL>|0|False|CC00F29709C3|840|50|{FC3DB4A6-1A8D-4595-BD99-279880918C25}|TxhValueLoad|2/22/2006 6:40:28 PM~
+2006-02-22 18:23:11.983|2006-02-22 18:23:11.983|50|50|Value Load|A2A ONLINE CLIENTS|US Secondary Card|Completed OK|<NULL>|0|False|CC007AB20474|840|50|{D1658420-28D8-4BC5-A51C-B70EBFB39A62}|TxhValueLoad|2/22/2006 6:23:12 PM~
+2006-02-22 18:17:01.113|2006-02-22 18:17:01.113|50|50|Value Load|A2A ONLINE CLIENTS|US Secondary Card|Completed OK|<NULL>|0|False|CC005AECF5C6|840|50|{AE6D5B31-3AF9-4C31-92A9-9E78FFE002CE}|TxhValueLoad|2/22/2006 6:17:01 PM~
+2006-02-09 00:21:59.000|2006-02-10 09:41:04.397|49.44|46|Purchase - Eating Places, Restaurants|94TH AERO SQUADRON #06|US Secondary Card|Completed OK|<NULL>|0|False|5554186604172008408860|840|49.44|{A33F03F5-CEE1-4CEA-82EC-F415DC109B6A}|TxhPurchase|2/8/2006 7:22:00 PM~
+2006-02-06 17:58:43.000|2006-02-08 08:55:06.670|5.59|5.59|Purchase - Quick Payment Service, Fast Food Restaurants|DUNKIN DONUTS|US Secondary Card|Completed OK|<NULL>|0|False|85443946038980000698307|840|5.59|{164641DE-F102-49C5-8916-769692BE77B0}|TxhPurchase|2/6/2006 12:58:45 PM~
+2006-02-06 16:12:43.000|2006-02-08 08:41:06.057|1|22.08|Purchase - Automated Fuel Dispenser|MURPHY 5738 @ WAL-MART|US Secondary Card|Completed OK|<NULL>|0|False|5452526038370812012309|840|1|{B307D382-1B0A-4CAC-9890-84D63FDB57D7}|TxhPurchase|2/6/2006 11:12:04 AM~
+2006-02-06 00:06:51.260|2006-02-06 00:06:51.260|50|50|Value Load|A2A ONLINE CLIENTS|US Secondary Card|Completed OK|<NULL>|0|False|CC0056DEDA37|840|50|{424D1F68-2811-4978-8E34-1D6B5338F639}|TxhValueLoad|2/6/2006 12:06:51 AM~
+2006-02-06 00:03:45.593|2006-02-06 00:03:45.593|50|50|Value Load|A2A ONLINE CLIENTS|US Secondary Card|Completed OK|<NULL>|0|False|CC00E28614FE|840|50|{79918FBA-C0DE-4273-A1E9-128A5F034A9C}|TxhValueLoad|2/6/2006 12:03:46 AM~
+2006-02-06 01:43:08.000|2006-02-08 08:41:06.057|6.95|6.95|Purchase - Quick Payment Service, Fast Food Restaurants|MIAMI SUBS|US Secondary Card|Completed OK|<NULL>|0|False|85486756038906912899288|840|6.95|{466EC2F7-B90D-4359-8CFF-E882FEC4E86E}|TxhPurchase|2/5/2006 8:43:09 PM~
+2006-01-18 12:47:42.390|2006-01-18 12:47:42.390|50|50|Value Load|CUSTOMER SERVICE|US Secondary Card|Completed OK|Balance Adjustment|0|False|CC00F08F0173|840|50|{4B5C2D9F-9558-4538-B3E2-96B9402ED8BC}|TxhValueLoad|1/18/2006 12:47:42 PM
+
+
+
+
+
+
+
+74elsie@blueyonder.co.uk
+17 ewers rd, kimberworth, rotherham, s611ey 
+eunice, uk
+
+
+Jose
+Sandoval
+
+09576491
+5150860000001754
+
+'0~5150860000001754|2|ACTIVE|1732537645|JOSE|SANDOVAL|<NULL>|9999|0|ASIX USA|4314|US Primary Card|1678|ASIX MT - US|U.S. Dollar|2|USD|L|224 DATURA STREET SUITE 506|<NULL>|WEST PALM BEACH|FL|33401|5618456543|<NULL>|JSANDOVAL@N-VIA.COM|10/5/1969|ASIX Money Transfer|<NULL>|<NULL>|<NULL>|5150860000001754'
+
+http://www.caribpay.com/cgi-bin/caribpay.exe/DoInetGetDebitCardLoadLimits?CARD_NUMBER=5150860010030736
+
+Percy Caro Cespedes
+Card number = 5150860000061790
+DOB = 25/11 
+
+windows 98 SE S/N: DMWRC-T9XP4-GJ2P8-26G66-V9WBB
+
+https://partners.wctravel.com/admin2/index.cgi
+u: gfern
+p:can196
+
+Juan Rubio
+5150860010001752 Maria
+
+wpsadmin
+mb2dqw1u
+
+Maria Viacava
+5150860010001757
+15/01/
+
+http://www.caribpay.com/cgi-bin/caribpay.exe/DoInetWildCardAccountSearch?CARD_NUMBER=5150860010001752&FIRST_NAME=MARIA&LAST_NAME=VIACAVA
+http://www.caribpay.com/cgi-bin/caribpay.exe/DoInetWildCardAccountSearch?CARD_NUMBER=5150860010030736&FIRST_NAME=MOSES&LAST_NAME=MAINA
+
+172.30.3.126
+
+ssh-sequence ihs-prod-all bounce_IHS_was.script
+ssh-sequence ihs-prod-all bounce_IHS_was_internet.script
+ssh-sequence ihs-prod-all bounce_IHS_was_http.script
+
+404993
+
+jnousr
+jn0n5r
+LMitchell@jnglobal.com
+
+http://www.colorpilot.com/price_pdflib.html
+
+LAGUARDIA
+6785929293
+
+111 NW 1st st suite 710 33128
+
+18009409633
+
+C000000001 CABLE AND WIRELESS	
+C000000002 JAMAICA PUBLIC SERVICE
+C000000003 NATIONAL WATER COMMISSION
+
+	#---- AssurTrack settings.
+	ProxyPass /agm/SmartTrack       		http://catfish.atl0.assurant.com/agm/SmartTrack
+	ProxyPassReverse /agm/SmartTrack       	http://catfish.atl0.assurant.com/agm/SmartTrack
+	ProxyPass /oraClient            		http://catfish.atl0.assurant.com/oraClient
+	ProxyPassReverse /oraClient            	http://catfish.atl0.assurant.com/oraClient
+	ProxyPass /servlet/f60servlet       	http://catfish.atl0.assurant.com/servlet/f60servlet
+	ProxyPassReverse /servlet/f60servlet    http://catfish.atl0.assurant.com/servlet/f60servlet	
+	ProxyPass /assurtrack_icons     		http://catfish.atl0.assurant.com/assurtrack_icons
+	ProxyPassReverse /assurtrack_icons     	http://catfish.atl0.assurant.com/assurtrack_icons
+	ProxyPass /servlet/f60listener  		http://catfish.atl0.assurant.com/servlet/f60listener
+	ProxyPassReverse /servlet/f60listener 	http://catfish.atl0.assurant.com/servlet/f60listener
+	ProxyPass /jinitiator  					http://catfish.atl0.assurant.com/jinitiator
+	ProxyPassReverse /jinitiator 			http://catfish.atl0.assurant.com/jinitiator
+	ProxyPass /forms60java  				http://catfish.atl0.assurant.com/forms60java
+	ProxyPassReverse /forms60java 			http://catfish.atl0.assurant.com/forms60java
+	#---- End AssurTrack settings.
+
+
+
+5150860000037360
+
+emailmessage := emailmessage
+                            	+ 'Biller: ' + Values['ServiceProviderName' + IntTostr(billno)] + #13
+                                + 'Account Number: '
+                                + Values['Account'+IntTostr(billno)] + #13
+                                + ' Amount: ' + FormatCurr('$ 0.00', accountamount) + #13
+                                + 'Your reference for this payment is: ' + receiptnumber + #13 + #13 ;
+                                
+SendEmail(WEBMASTER_EMAIL, WEBMASTER_EMAIL + ',mmaina@treasurecom.com',
+        	'Bill(s) paid by ' + userid,
+            'Bills paid for the following accounts.'
+            + #13 + #13
+            + emailmessage
+            + ' by '
+            + userid, '', TEXT_EMAIL) ;
+            
+                                           // Send email to the client.
+        if (clientemail <> '') then
+        begin
+        	emailmessage := 'Greetings from ' + SITE_DOMAIN + '.' + #13
+            	+ #13
+                + 'We thought you''d like to know that we received '
+                + 'your bill payments.' + #13
+                + #13
+                + 'Thanks for using ' + SITE_DOMAIN + ' to pay your '
+                + 'bills and we hope to see you again soon.' + #13
+                + #13
+                + 'Bills for the following accounts were paid.' + #13
+                + #13
+                + emailmessage
+                + #13
+                + 'Please allow for 24hrs for the bill payment to be applied '
+                + 'and 1-3 days for the biller to update their records.' + #13
+                + #13
+                + 'Thanks again for using ' + SITE_DOMAIN + ' to pay '
+                + 'your bills.' + #13
+                + #13
+                + 'Customer Service' ;
+
+            SendEmail(WEBMASTER_EMAIL, clientemail,
+            	'Bill(s) been paid.', emailmessage, '', TEXT_EMAIL) ;
+            	
+billpayments@caribpay.com
+
+FirstName
+LastName
+
+http://www.caribpay.com/cgi-bin/caribpay.exe/DoInetWildCardAccountSearch?CARD_NUMBER=5150860010034563&FIRST_NAME=Joan&LAST_NAME=Duffy
+
+Transactions by cashier gives Index out of bounds error. On closing, gives access violation.
+
+Add following reports
+	Checks cashed
+	CaribPay visa cards ordered
+
+Show cashier activity report
+Void Transactions not working...
+Log out cashier settlement does not work...it does not log you out when it says it will.
+Problem Exporting TreasureCards...
+
+
+steve schrader
+8886836430-3034
+fax: 800-919-6152
+2 stubs
+copy o hoa ins.
+copy mortgage note - all pages.
+
+show bill payments paid by check.
+check that an email is sent when a new client is registered in transactpro
+remove old number from bill payment by credit card
+
+aliases not found
+don't send bills by check to mastercard
+email not showing bill amount paid...only total showing
+if biller does not exist, give message telling them the error
+send emails only for the agent.
+don't make the security questions mandatory.
+emails to goto customers@caribpay.com
+audit trail does not show the bill payments.
+error "integer overflow".
+
+Mastercard batch sequencing...
+Check return files for mastercard...
+Show biller id on management console...
+Show billers already added by cashiers...
+Make seperate list for bills paid by check and electronic.
+Add random name and password when creating client record...
+Create ability to have a master agent
+Create report for showing billers by check...
+Checking for biller with mask does not work...
+report for billpayments by cashier not working...
+
+
+############
+644184509500033
+###############
+
+7183845148097225
+PaymentMethod
+
+function TBillPaymentForm.IsValidAccountDetails: boolean ;
+begin
+	Result := False ;
+
+
+        if Trim(NameonBillEb.Text) = '' then
+        begin
+        	MessageDlg('Please enter the name on bills.', mtWarning,
+                	[mbOk], 0) ;
+                NameonbillEb.SetFocus ;
+                Exit ;
+        end ;
+        if Trim(Address1onBillEb.Text) = '' then
+        begin
+        	MessageDlg('Please enter the address on bills.', mtWarning,
+                	[mbOk], 0) ;
+        	Address1onBillEb.SetFocus ;
+                Exit ;
+        end ;
+        if (Trim(ProvinceEB.Text) = '') then
+        begin
+        	MessageDlg('Please enter the state for bills.', mtWarning,
+                	[mbOk], 0) ;
+                ProvinceEb.SetFocus ;
+                Exit ;
+        end ;
+
+        Result := True ;
+end ;
+
+Marriott ref: 244209
+
+7187712733759229
+
+9783397001~VERIZON~~~~~~~~~~USA~~~~ELECTRONIC|0002687395~VERIZON~~~~~~~~~~USA~~~~ELECTRONIC|0243300100~VERIZON ONLINE~~~~~~~~~~USA~~~~ELECTRONIC|
+
+666072774500064
+
+644184484000074
+
+letmein
+l3tn31n
+
+
+net.sourceforge.jtds.jdbc.Driver
+dbc:jtds:sqlserver://192.168.1.18:1433
+
+Hi Jason,
+
+I spoke to IBM and they mentioned there were some verisign certificates that were expired. On their website they have an updated cacerts file which I installed on the .54 and .53 servers, then tested as you instructed and I got the "blank or no report returned" message. I believe now it should work. Please test and let me know if there are any more problems.
+
+locations ear
+wps
+
+helpdesk.html
+3052468197
+rentersInsurance
+premiumServer
+
+ts02d3
+cl0newars
+
+terry ropoa
+6786569508
+
+humeto camejo
+3055882712
+
+atl0ntgwy02.atlo.assurant.com
+
+"/http/tomcat-agilstar/webapps"
+
+
+croy
+password
+
+8002552278
+
+10/18/2006 22:51:29 https://a2a.wildcardsystems.com/a2a/CO_AssignSecondaryCard.asp?personid=1733888338&userid=a2a16589&pwd=treasure&sourceid=38&subprogid=4315&clientid=8762&packageid=1643&languageid=99&purseno=14&primarycard=5150860000092753&First=Susan&Last=Kariuki&ssn=999999999&Addr1=1261%20SE%2028%20Ct&Addr2=Unit%20201&city=Homestead&state=FL&zipcode=33035&Phone=954%2D428%2D8601
+0 No serial numbers left- subprogid: 4315, packageid: 1678|0|-2147217900
+
+9544416887
+
+10/19/2006 21:10:43 https://a2a.wildcardsystems.com/a2a/CO_AssignCard_LoadValue.asp?userid=a2a16589&pwd=treasure&sourceid=38&subprogid=4315&clientid=8762&packageid=1643&languageid=99&purseno=14&cardtype=2&loadamount=10.00&personid=1733888337
+
+192.148.173.12
+
+ytterbium
+
+
+https://a2a.wildcardsystems.com/a2a/CO_AssignCard_LoadValue.asp?userid=a2a16589&pwd=treasure&sourceid=38&subprogid=4315&clientid=8762&packageid=1643&languageid=99&purseno=14&cardtype=2&loadamount=10.00&personid=1733991249&primarycard=5150860000016398
+
+1 5150860010006926|<NULL>|<NULL>|CC00484C656D^
+
+https://a2a.wildcardsystems.com/a2a/CO_UpdatePerson.asp?userid=a2a16589&pwd=treasure&sourceid=38&subprogid=4315&clientid=8762&packageid=1643&languageid=99&purseno=14&personid={personid of secondary card holder}&holderid={personid of primary card holder}&SelfEmployed=0&walletconsent=1
+
+5617530889
+
+/u05/CPSG/log4j-1.2.8.jar
+/u05/CPSG/commons-logging.jar
+
+
+patrick reys
+assata salaam
+
+function wildcardModifyCardHolderInfo(card_holder: WildCardRecord;
+var ret_message: string): boolean ;
+
+function wildcardReverseAuthorizedTransaction(card_no: string; log_id: String;
+reason_id: string; var ret_message: string): boolean ;
+
+https://a2a.wildcardsystems.com/a2a/CO_CalculateFees.asp?userid=a2a16589&pwd=treasure&sourceid=38&subprogid=4556&clientid=16589&packageid=1736&languageid=99&purseno=14&actionid=1&amount=10&cardnum=4403610010012244
+user_id := 'a2a16589' ;
+		password := 'treasure' ;
+        //subprog_id := '4556' ;
+        client_id := '16589' ;
+        package_id := '1736' ;
+        
+sql348.mysite4now.com
+
+c:\hosting\webhost4life\member\sueerik\Brandswarehouse.udl
+
+011-254-721-262-352
+
+abdrderm
+androgel
+
+11/28/2006 21:21:44 https://a2a.wildcardsystems.com/a2a/CO_AssignSecondaryCard.asp?userid=a2a16589&pwd=treasure&sourceid=38&subprogid=4556&clientid=16589&packageid=1736&languageid=99&purseno=14&First=Dillon%20A&Last=Bethel%20Jr&ssn=999999999&Addr1=1811%20NW%2051st%20St&Addr2=Apt%20%232674&city=Ft%20Lauderdale&state=FL&zipcode=33309&Phone=2423280166
+0 Invalid Package ID.|0|-1
+
+Steven Lee
+7143387589
+7147855881
+
+tpmifu
+eliza0304
+
+tpmifv
+katty11
+
+address to clone: 00-02-3f-6d-c9-f8
+MTU: 1500
+SSID: F. U.
+
+http://api.clickatell.com/http/sendmsg?user=TreasureCom1&password=abc123&api_id=2963821&to=13059755339&text=Hi+Enrique+This+is+Moses.+Please+send+a+message+to+447624806810
+http://api.clickatell.com/http/sendmsg?user=TreasureCom1&password=letmein1&api_id=2963821&to=15616024881&text=Meet+me+outside
+
+u:5616892120
+p:0666
+Anniversary May
+
+http://api.clickatell.com/http/sendmsg?user=TreasureCom1&password=abc123&api_id=2963821&to=51197516125&text=Meet+me+outside
+http://messaging.treasurecom.com:13013/cgi-bin/sendsms?username=tester&password=foobar&to=15613010001&text=If+you+get+this+then+kannel+is+now+working+with+clickatell...
+
+http://messaging.caribpay.com/cgi-bin/caribpay.exe/SMSPayment?sender=%p&text=%r
+
+http://messaging.treasurecom.com:13013/cgi-bin/sendsms?username=tester&password=foobar&to=15613010001&text=If+you+get+this+then+kannel+is+now+working+with+clickatell...
+
+http://api.clickatell.com/http/sendmsg?user=TreasureCom1&password=abc123&api_id=2963821&to=51197516125&text=Meet+me+outside
+
+8005546386
+
+ca0877
+pablo66
+
+
+954-741-2870
+Pablo Quinones
+
+786-623-9643
+
+32578
+
+scott hudson.
+6786370183
+
+http://messaging.caribpay.com/cgi-bin/caribpay.exe/MobileTransaction?username=clickatell&password=abc123&
+
+011447624806810 714-338-7589
+29000669151204791
+http://messaging.caribpay.com/cgi-bin/caribpay.exe/MobileTransaction?username=clickatell&password=abc123&?api_id=2963821&from=13059755339&to=447624806810&timestamp=2007-06-12+03%3A16%3A58&text=1234+mp+12.00+15613668611&charset=ISO-8859-1&udh=
+http://messaging.caribpay.com/cgi-bin/caribpay.exe/MobileTransaction?username=clickatell&password=abc123&?api_id=2963821&from=13059755339&to=447624806810&timestamp=2007-07-30+03%3A16%3A58&text=34567+DCB+9174&charset=ISO-8859-1&udh=
+http://messaging.caribpay.com/cgi-bin/caribpay.exe/MobileTransaction?username=clickatell&password=abc123&?api_id=2963821&from=13059755339&to=447624806810&timestamp=2007-07-30+03%3A16%3A58&text=34567+DCL+9174+15.00&charset=ISO-8859-1&udh=
+http://messaging.caribpay.com/cgi-bin/caribpay.exe/MobileTransaction?username=clickatell&password=abc123&?api_id=2963821&from=13059755339&to=447624806810&timestamp=2007-07-30+03%3A16%3A58&text=34567+M2M+15613010001+15.00&charset=ISO-8859-1&udh=
+
+http://messaging.caribpay.com/cgi-bin/caribpay.exe/MobileTransaction?username=clickatell&password=abc123&?api_id=2963821&from=13059755339&to=447624806810&timestamp=2007-07-30+03%3A16%3A58&text=34567+CPB&charset=ISO-8859-1&udh=
+http://messaging.caribpay.com/cgi-bin/caribpay.exe/MobileTransaction?username=clickatell&password=abc123&?api_id=2963821&from=13059755339&to=447624806810&timestamp=2007-07-30+03%3A16%3A58&text=34567+M2R+Moze+11.00&charset=ISO-8859-1&udh=
+http://messaging.caribpay.com/cgi-bin/caribpay.exe/MobileTransaction?username=clickatell&password=abc123&?api_id=2963821&from=13059755339&to=447624806810&timestamp=2007-07-30+03%3A16%3A58&text=34567+A2A+1234+15.00&charset=ISO-8859-1&udh=
+
+http://messaging.caribpay.com/cgi-bin/caribpay.exe/MobileTransaction?username=clickatell&password=abc123&?api_id=2963821&from=51197516125&to=447624806810&timestamp=2007-07-30+03%3A16%3A58&text=0790+CPB&charset=ISO-8859-1&udh=
+http://messaging.caribpay.com/cgi-bin/caribpay.exe/MobileTransaction?username=clickatell&password=abc123&?api_id=2963821&from=13059755339&to=447624806810&timestamp=2007-07-30+03%3A16%3A58&text=34567+M2M+51199625051+15.00&charset=ISO-8859-1&udh=
+http://messaging.caribpay.com/cgi-bin/caribpay.exe/MobileTransaction?username=clickatell&password=abc123&?api_id=2963821&from=13059755339&to=447624806810&timestamp=2007-07-30+03%3A16%3A58&text=34567+A2A+1234+15.00&charset=ISO-8859-1&udh=
+http://messaging.caribpay.com/cgi-bin/caribpay.exe/MobileTransaction?username=clickatell&password=abc123&?api_id=2963821&from=13059755339&to=447624806810&timestamp=2007-07-30+03%3A16%3A58&text=34567+A2A+1234+15.00&charset=ISO-8859-1&udh=
+http://messaging.caribpay.com/cgi-bin/caribpay.exe/MobileTransaction?username=clickatell&password=abc123&?api_id=2963821&from=13059755339&to=93040&timestamp=2007-07-30+03%3A16%3A58&text=34567+MP+3.00+29050482042011932&charset=ISO-8859-1&udh=
+
+http://messaging.caribpay.com/cgi-bin/caribpay.exe/MobileTransaction?username=clickatell&password=abc123&?api_id=2963821&from=17709063989&to=93040&timestamp=2007-07-30+03%3A16%3A58&text=0607+ACT+30609358976442&charset=ISO-8859-1&udh=
+
+http://messaging.caribpay.com/cgi-bin/caribpay.exe/MobileTransaction?username=clickatell&password=abc123&?api_id=2963821&from=511999625051&to=6842&timestamp=2007-07-30+03%3A16%3A58&text=3321+M2R+Julio+10.00+cobra+en+scotia&charset=ISO-8859-1&udh=
+ClientID, FirstName, LastName, Address1, Address2, City, Province, PostCode, Country, DayTelephone, EveningTelephone, Email
+
+select  SMS_FROM, SMS_TO , SMS_TEXT, FLAG_SENT,METHOD  from outbox where flag_sent = 'N' and trials <= 0
+
+78252
+
+51199625051
+
+mclmDS2
+msqDS2
+uspDS2
+vscpDS2
+//cscds2
+
+
+
+        sender_phone.loadMobilePhoneNumber(Request.QueryFields.Values['from']);
+        recepient := getMerchantRecordByDayTelephone(mobile_transaction.getRecepientAccount) ;
+
+        if recepient.merchantid = '' then
+        begin
+            mobile_transaction.sendReplyText('mWorldPay: The merchant telephone number you entered is invalid.');
+            Response.Content := 'Invalid Merchant Number.' ;
+            exit ;
+        end ;
+
+        if sender_phone.getMobilePhoneNumber.phone_number <> '' then
+        begin
+            if sender_phone.getMobilePhoneNumber.pin <> mobile_transaction.getCustomerPIN then
+            begin
+                mobile_transaction.sendReplyText('mWorldPay: The pin you entered is invalid for this phone number.');
+                Response.Content := 'Invalid PIN. '
+                    + 'To=[' + mobile_transaction.getTo + ']'
+                    + 'From=[' + mobile_transaction.getFrom + ']'
+                    + 'Text=[' + mobile_transaction.getText + ']'
+                    + 'Amount=[' + FormatCurr('0.00', mobile_transaction.getAmount) + ']'
+                    + 'Recepient Account=[' + mobile_transaction.getRecepientAccount + ']'
+                    + 'CustomerPIN=[' + mobile_transaction.getCustomerPIN + ']'
+                    + 'SenderPIN=[' + sender_phone.getMobilePhoneNumber.pin + ']';
+                exit ;
+            end ;
+
+            sender_record := getMerchantRecord(sender_phone.getClientID) ;
+
+            if sender_record.status <> RCD_ACTIVE then
+            begin
+                mobile_transaction.sendReplyText('mWorldPay: Your account is not currently active.');
+                Response.Content := 'Account not active.' ;
+                exit ;
+            end ;
+
+            if recepient.status <> RCD_ACTIVE then
+            begin
+                mobile_transaction.sendReplyText('mWorldPay: Merchant''s account is not currently active.');
+                Response.Content := 'Merchant Account not active.' ;
+                exit ;
+            end ;
+
+            sender_balance := GetCurrentMerchantTransactionAmount(sender_record.merchantid) ;
+            if sender_balance < mobile_transaction.getAmount then
+            begin
+                mobile_transaction.sendReplyText('mWorldPay: You do not have enough funds in your account to satisfy your request.');
+                Response.Content := 'Insufficient Funds.' ;
+                exit ;
+            end ;
+
+            voucher_country := getCountryCodesByName(recepient.country) ;
+            voucher_country := parseString(voucher_country, FIELD_DELIM, COUNTRY_CODES_ALPHA_3) ;
+            exchange_rate := getExchangeRate(recepient.primary_currency) ;
+            local_equivalent := exchange_rate * mobile_transaction.getAmount ;
+
+            // Send transfer of funds to the voucher provider account.
+            transaction_id := generateUniqueID ;
+            result_str := doTransferToMobileReceiver(sender_record.merchantid,
+                recepient.merchantid,
+                mobile_transaction.getAmount,
+                generateUniqueID, WEBSITE_NAME,
+                CARIBPAY_AGENT_ID, '' { Comment },
+                '' {Source of Funds}, pickup_id, true,
+                '' {Fund Receiver Type}, transaction_id) ;
+
+            if result_str = IS_ERROR then
+            begin
+                mobile_transaction.sendReplyText('mWorldPay: Could not complete your transaction.');
+                Response.Content := 'Error transfering funds. '
+                    + 'Error Message->' + errormessage ;
+                exit ;
+            end ;
+
+            if result_str = SUCCESS then
+            begin
+                client_name := g_merchant_record.name ;
+                if client_name = '' then
+                begin
+                    client_name := g_merchant_record.first_name
+                        + ' '
+                        + g_merchant_record.last_name ;
+                end ;
+
+                // Save the gift voucher transaction.
+                // NOTE: The voucher number is created from the database.
+                voucher_record.client_id := sender_record.merchantid;
+                voucher_record.receiver_id := recepient.merchantid ;
+                voucher_record.senvia_pickup_id := pickup_id ;
+                voucher_record.amount := local_equivalent ;
+                voucher_record.exchange_rate := exchange_rate ;
+                voucher_record.receiver_type := V_CLIENT_ID ;
+                voucher_record.passcode := IntToStr(RandomRange(1111, 999999)) ;
+
+                issueGiftVoucher(voucher_record) ;
+
+                // Save the transaction to the gift voucher provider.
+                recepient_balance := GetCurrentMerchantTransactionAmount(recepient.merchantid) ;
+                recepient_balance := recepient_balance + local_equivalent ;
+                description := 'Sale of Voucher No:' + IntToStr(voucher_record.voucher_number) ;
+                InsertMerchantTransaction(transaction_id, IntToStr(voucher_record.voucher_number),
+                    Date, Time, recepient.merchantid,
+                    SALE_TRANSACTION, mobile_transaction.getAmount,
+                    description, RCD_ACTIVE, recepient_balance, CARIBPAY_AGENT_ID, WEBSITE_NAME,
+                    sender_phone.getMobilePhoneNumber.phone_number) ;
+
+                pending_trans.sender_id := sender_record.merchantid ;
+                pending_trans.receiver_id := recepient.merchantid ;
+                pending_trans.amount := local_equivalent ;
+                pending_trans.currency_code := recepient.primary_currency ;
+                pending_trans.exchange_rate := exchange_rate ;
+                pending_trans.reference := pickup_id ;
+
+                insertPendingMobileTransaction(pending_trans) ;
+                mobile_transaction.sendReplyText('mWorldPay: Your voucher no. is:' + IntToStr(voucher_record.voucher_number) + #13
+                    + 'Your passcode is:' + voucher_record.passcode) ;
+                Response.Content := 'OK: ' + pickup_id ;
+                exit ;
+                
+155.229.31.38                
+
+SELECT     CaribPay.dbo.MerchantAgentTransactions.ID, MerchantAgentTransactions.Reference, MerchantAgentTransactions.[Date], MerchantAgentTransactions.[Time], 
+                      MerchantAgentTransactions.TransactionType, MerchantAgentTransactions.Amount, MerchantAgentTransactions.Description, 
+                      MerchantAgentTransactions.AccountBalance, Clients.dbo.Clients.FirstName, Clients.dbo.Clients.LastName, 
+                      Clients.dbo.ClientMobilePhoneNumbers.MobilePhoneNumber
+FROM         MerchantAgentTransactions INNER JOIN
+                      IssuedGiftVouchers ON MerchantAgentTransactions.Reference = IssuedGiftVouchers.VoucherNumber INNER JOIN
+                      Clients.dbo.Clients ON IssuedGiftVouchers.ClientID = Clients.dbo.Clients.ClientID INNER JOIN
+                      Clients.dbo.ClientMobilePhoneNumbers ON Clients.dbo.ClientMobilePhoneNumbers.ClientID = Clients.dbo.Clients.ClientID
+WHERE     (MerchantAgentTransactions.[Date] >= '06/01/2007') AND (MerchantAgentTransactions.[Date] <= '06/26/2007')
+ORDER BY CaribPay.dbo.MerchantAgentTransactions.ID DESC
+
+
+
+SELECT     CaribPay.dbo.MerchantAgentTransactions.ID, CaribPay.dbo.MerchantAgentTransactions.Reference, CaribPay.dbo.MerchantAgentTransactions.[Date], 
+                      CaribPay.dbo.MerchantAgentTransactions.[Time], CaribPay.dbo.MerchantAgentTransactions.TransactionType, 
+                      CaribPay.dbo.MerchantAgentTransactions.Amount, CaribPay.dbo.MerchantAgentTransactions.Description, 
+                      CaribPay.dbo.MerchantAgentTransactions.AccountBalance, Clients.FirstName, Clients.LastName, 
+                      ClientMobilePhoneNumbers.MobilePhoneNumber
+FROM         CaribPay.dbo.MerchantAgentTransactions INNER JOIN
+                      CaribPay.dbo.IssuedGiftVouchers ON 
+                      CaribPay.dbo.MerchantAgentTransactions.Reference = CaribPay.dbo.IssuedGiftVouchers.VoucherNumber INNER JOIN
+                      Clients ON CaribPay.dbo.IssuedGiftVouchers.ClientID = Clients.ClientID INNER JOIN
+                      Clients.dbo.ClientMobilePhoneNumbers ON Clients.dbo.ClientMobilePhoneNumbers.ClientID = Clients.dbo.Clients.ClientID
+ 
++ 'CaribPay.dbo.MerchantAgentTransactions.ID, '
+        + 'MerchantAgentTransactions.Reference, '
+        + 'MerchantAgentTransactions.[Date], '
+        + 'MerchantAgentTransactions.[Time],'
+        + 'MerchantAgentTransactions.TransactionType, '
+        + 'MerchantAgentTransactions.Amount, '
+        + 'MerchantAgentTransactions.Description, '
+        + 'MerchantAgentTransactions.AccountBalance, '
+        + 'Clients.dbo.Clients.FirstName, '
+        + 'Clients.dbo.Clients.LastName, '
+        + 'Clients.dbo.ClientMobilePhoneNumbers.MobilePhoneNumber '
+        
+Date
+Time
+Reference
+TransactionType
+Amount
+AccountBalance
+FirstName
+LastName
+MobilePhoneNumber        
+
+32404
+
+			if StrToCurr(mobile_transaction.getAmount)) < MIN_DEBIT_CARD_RELOAD_AMNT then
+            begin
+                mobile_trnsaction.sendReply('The minimum amount you can transfer is $ 10.00.') ;
+                Result := 'Must transfer at least $10.00' ;
+                exit ;
+                
+            end ;          
+
+            fee := getServiceFee(StrToInt(cashier_record.getRetailAgent),
+            	cashier_record.getLocation, g_merchant_record.merchantid,
+            	DEBIT_CARD_WITHDRAWAL, balance, MERCHANT_DEBIT_CARD_FEE,
+                g_merchant_record.primary_currency, ANY_COUNTRY_FEE) ;
+
+
+            if (balance - fee) < StrToCurr(mobile_transaction.getAmount) then
+            begin
+                mobile_transaction.sendReply('The amount you wish to withdraw is more '
+                    + 'than your current account balance.') ;
+                Result := 'Balance less than requested amount.' ;
+                exit ;
+            end ;
+
+            // Confirm that the merchant is allowed to withdraw from their account.
+            if MerchantCanWithdraw(client_record.merchantid) = False then
+            begin
+                withdrawal_limit := GetMerchantWithdrawalLimit(client_record.merchantid) ;
+                if withdrawal_limit >= 0 then
+                begin
+                    if ParseFloat(mobile_transaction.getAmount) >= withdrawal_limit then
+                    begin
+                        mobile_transaction.sendReplyText('The amount you wish to transfer is above your '
+                            + 'withdrawal limit. Your withdrawal limit is: '
+                            + FormatCurr('$ 0.00', withdrawal_limit) + '. '
+                            + 'Your account is less than 3 months old and '
+                            + 'therefore has a withdrawal limit of 60% the '
+                            + 'average balance.') ;
+                    end ;
+                end ;
+            end ;
+
+            if wildcardLoadValue(debit_card.card_no, StrToCurr(Values['TRANSFER_AMOUNT']),
+                 	errormessage) = false then
+                begin
+                	
+                end ;
+           	
+                acount_balance := acount_balance - ParseFloat(mobile_transaction.getAmount) ;
+                
+                
+                InsertMerchantTransaction(transaction_id,
+                    withdrawal_id, Date, Time, g_merchant_record.merchantid,
+					DEBIT_CARD_WITHDRAWAL,
+                    StrToCurr(mobile_transaction.getAmount), 'Transfer to Card: ' + MaskCardNumber(debit_card.card_no),
+                    RCD_ACTIVE, balance, CARIBPAY_AGENT_ID, WEBSITE_NAME,
+                    Request.RemoteAddr) ;
+                    sleep(100) ;
+
+                account_balance := account_balance - fee ;
+
+                InsertMerchantTransaction(GenerateUniqueID, transaction_id, Date,
+                    Time, client_record.merchantid,
+                    STANDARD_MERCHANT_FEE, fee, MERCHANT_DEBIT_CARD_FEE,
+                    RCD_ACTIVE, balance, CARIBPAY_AGENT_ID, WEBSITE_NAME,
+                    Request.RemoteAddr) ;
+
+            	client_name := client_record.name ;
+            	
+            	emailmessage := 'Hi ' + client_name + ',' + #13
+                	+ #13
+                    + 'Thank you for using our e-commerce service.' + #13
+                    + 'This message is to confirm your request to withdraw funds from your account '
+                    + 'to your visa card below. Below are the details of this transfer.' + #13
+                    + #13
+                    + 'Client Name: ' + client_name + #13
+                    + 'Client ID: ' + client_record.merchantid + #13
+                    + 'Transfer Amount: ' + mobile_transaction.getAmount + #13
+                    + 'Card Number: ' + MaskCardNumber(debit_card.card_no) + #13
+                    + #13
+                    + 'Customer Service.' + #13 ;
+
+            	SendEmail(WEBMASTER_EMAIL, client_record.email,
+                	'CaribPay Withdrawal', emailmessage, '', TEXT_EMAIL) ;
+
+            	SendEmail(WEBMASTER_EMAIL, WEBMASTER_EMAIL, 'CaribPay Withdrawal',
+                	emailmessage, '', TEXT_EMAIL) ;
+            	
+            	globalmessage := 'The details of your transaction are shown below.<br>'
+                		+ 'Client Name: ' + client_name + '<br>'
+                    	+ 'Client ID: ' + client_record.merchantid + '<br>'
+                    	+ 'Transfer Amount: ' + mobile_transaction.getAmount + '<br>'
+                    	+ 'Card Number: ' + MaskCardNumber(debit_card.card_no) + '<br>' ;
+      
+            	commitTransaction ;
+
+clickatell            	
+TreasureCom1
+TMR423
+abc123
+
+IdCoderMessageDigest,
+
+$(DELPHI)\Lib\Debug;C:\Moses\Libs\Delphi32\RxLib_D7\Units;C:\Moses\Libs\Delphi32\TIEHTTP
+
+C:\Moses\Libs\Delphi32\DelphiXMLRPC\lib;"C:\Moses\Libs\Delphi32\Dial up networking"
+
+
+jason mcgovan
+18668671716x74311
+
+sparks07
+reset1
+rm0kyk
+
+00:02:3f:6d:c9:f8
+letmein1
+CBF66225E9BC13301C6067E4AF
+
+602-285-2174
+
+Daniel 
+Kieth Kollar
+
+e and then I print it using pdf from www.exp-systems.com 
+
+- Registration Name: Michael Treasure
+- Registration  Key: 5661-77Z1-V7D0-0016
+
+
+        RewriteRule .* - [F]
+
+        RewriteRule .* - [F]
+
+        RewriteRule .* - [F]
+
+        RewriteRule .* - [F]
+
+        
+        www.mysecureinsplan.com
+        
+        200.37.161.238
+        
+        
+        jay aindla - 414-350-3401
+        
+        305 32441
+        
+/usr/local/bin/wireless-network.sh > /var/log/wireless-network.log 2>&1        
+could not get file information for /dev/lirc
+        
+var
+  Interf: IServerInterface;
+  RIOAccess: IRIOAccess;
+  X: THTTPRIO;
+begin
+  Intrf := GetIServerInterface(True, 
+          'http://MyServices.org/scripts/AppServer.dll/wsdl');
+  RIOAccess := Intrf as IRIOAccess;
+  X := RIOAccess.RIO as THTTPRIO;
+  
+ hkfiuw
+ 
+ 5:335 
+ atl: 839
+ mia 1057 pm
+ 
+brittanie - collector no. 2694
+8012460267
+S-amy - 801-246-0373
+8012460180
+
+18889323417
+
+Provider=SQLOLEDB.1;Password=caribpaydb1;Persist Security Info=True;User ID=caribpaydb;Initial Catalog=CaribPay;Data Source=dbserver;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=MOZE-XP;Use Encryption for Data=False;Tag with column collation when possible=False
+
+function TMainForm.getNoOfCaribPayReceivers: integer ;
+function TMainForm.getNoOfClients: integer ;
+function TMainForm.getNoOfCaribPayDebitCardHolders: integer ;
+
+IWS - Incomming Wireless Shared
+IMS - Incoming Mobile to Mobile Shared
+TS  - Land line terminated to mobile
+
+9101805213907212690200
+
+C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\regasm "C:\Program Files\Transnetwork\Confirmation Code Generator\ConfCodeGenerator.dll"
+C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\regasm "C:\Program Files\Transnetwork\Confirmation Code Generator\ConfCodeGenerator.dll" /tlb /verbose
+
+@xmitter_abr
+@xmitter_code
+@client_first_name
+@beneficiary_first_name
+@beneficiary_last_name
+@beneficiary_mother_mainden_name
+@money_amount
+
+3410077863x - vanguard.
+
+cn=WebTech,ou=AssurNet,o=Applications,DC=ASSURANT,DC=COM 
+
+lkcmvwasprd6
+
+https://www.caribpay.com/cgi-bin/caribpay.exe/MobileTransaction?
+
+
+procedure TMainForm.TrayMessage(var Msg: TMessage);
+var
+  p : TPoint;
+begin
+  case Msg.lParam of
+    WM_LBUTTONDOWN:
+    begin
+      // Do nada...
+    end;
+    WM_RBUTTONDOWN:
+    begin
+    	SetForegroundWindow(Handle);
+       	GetCursorPos(p);
+       	TrayPopUpMenu.Popup(p.x, p.y);
+       	PostMessage(Handle, WM_NULL, 0, 0);
+    end;
+  end;
+end;
+//-----------------------------------------------------------------------------
+
+procedure TMainForm.DrawBar(ACanvas: TCanvas);
+var
+  lf : TLogFont;
+  tf : TFont;
+begin
+  with ACanvas do begin
+    Brush.Color := clGray;
+    FillRect(Rect(0,0,20,92));
+    Font.Name := 'Tahoma';
+    Font.Size := 7;
+    Font.Style := Font.Style - [fsBold];
+    Font.Color := clWhite;
+    tf := TFont.Create;
+    try
+      tf.Assign(Font);
+      GetObject(tf.Handle, sizeof(lf), @lf);
+      lf.lfEscapement := 900;
+      lf.lfHeight := Font.Height - 2;
+      tf.Handle := CreateFontIndirect(lf);
+      Font.Assign(tf);
+    finally
+      tf.Free;
+    end;
+    TextOut(2, 85, 'CaribPay');
+  end;
+end;
+//-----------------------------------------------------------------------------
+
+procedure TMainForm.Exit1DrawItem(Sender: TObject; ACanvas: TCanvas;
+  ARect: TRect; Selected: Boolean);
+begin
+	if Selected then
+   		ACanvas.Brush.Color := clHighlight
+	else
+   		ACanvas.Brush.Color := clMenu;
+
+ 	ARect.Left := 25;
+ 	ACanvas.FillRect(ARect);
+
+ 	DrawText(ACanvas.Handle, PChar('Exit'), -1, ARect, DT_LEFT or DT_VCENTER or DT_SINGLELINE or DT_NOCLIP);
+
+ 	DrawBar(ACanvas);
+end;
+//-----------------------------------------------------------------------------
+
+procedure TMainForm.Exit1MeasureItem(Sender: TObject; ACanvas: TCanvas;
+  var Width, Height: Integer);
+begin
+	Width := 120 ;
+end;
+//-----------------------------------------------------------------------------
+
+procedure TMainForm.Show1Click(Sender: TObject);
+begin
+	MainForm.Show ;
+end;
+//-----------------------------------------------------------------------------
+
+
+
+procedure TMainForm.FormCreate(Sender: TObject);
+begin
+	initializing := true ;
+	readSettings ;
+    JamaicaExportDirectoryEb.Text := jam_export_directory ;
+    PeruExportDirectoryEb.Text := per_export_directory ;
+    ExportIntervalEb.Value := export_interval ;
+
+    // Start the application minimized in the system tray.
+    with TrayIconData do
+ 	begin
+    	cbSize := SizeOf(TrayIconData);
+    	Wnd := Handle;
+    	uID := 0;
+    	uFlags := NIF_MESSAGE + NIF_ICON + NIF_TIP;
+    	uCallbackMessage := WM_ICONTRAY;
+    	hIcon := Application.Icon.Handle;
+    	StrPCopy(szTip, Application.Title);
+  	end;
+
+	Shell_NotifyIcon(NIM_ADD, @TrayIconData);
+	
+procedure TMainForm.FormDestroy(Sender: TObject);
+begin
+	Shell_NotifyIcon(NIM_DELETE, @TrayIconData);
+end;
+
+procedure TMainForm.BitBtn3Click(Sender: TObject);
+begin
+	MainForm.Hide ;
+end;
+
+
+WM_ICONTRAY = WM_USER + 1;	
+
+Windows, Messages, shellapi, AppEvnts,
+
+CompanyID
+CompanyName
+TaxID
+Address1
+Address2
+City
+Province
+PostCode
+PrimaryCurrency
+Status
+DateCreated
+
+mbna - 81.00
+capitalone - 10.00
+gmflex - 30.00
+countrywide - 200.00
+BestBuy - 30.00
+AmericanExpress - 903.00
+Honda - 278.66
+DiscoverCard - 151.00
+
+
+
+
+
+http://www.caribpay.com/cgi-bin/caribpay.exe/APISearchVoucher?userid=james&password=leigh&voucher=1719&passcode=1416981&agentid=25
+
+"C:\Program Files\MyEclipse 6.5\eclipse\eclipse.exe" -vm "C:\Program Files\MyEclipse 6.5\jre\bin\javaw.exe"
+"C:\Program Files\MyEclipse 6.5\eclipse\eclipse.exe" -vm "C:\Program Files\Java\jre6\bin\javaw.exe"
+
+18008899939
+dwc720
+
+
+mwarari@bellsouth.net
+jhw566
+
+AfroIntroductions
+u:mwarash@live.com
+p:letmein
+
+http://www.eafricainfocus.com/wp-content/uploads/TalkingRocks.jpg
+
+<TABLE style="BORDER-RIGHT: #800000 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #800000 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; MARGIN: 2px 8px 8px; BORDER-LEFT: #800000 1px solid; WIDTH: 165px; PADDING-TOP: 5px; BORDER-BOTTOM: #800000 1px solid; BACKGROUND-COLOR: #e5ccbf" cellSpacing=0 cellPadding=0 align=right>
+        <TBODY>
+            <TR>
+
+                <TD style="COLOR: #800000; FONT-FAMILY: tahoma; size: 12px" align=left bgColor=#e5ccbf><IMG height=18 alt="''" src="http://www.eafricainfocus.com/wp-content/uploads/quotopenPN.jpg" align=left border=0><B style="FONT-SIZE: 16px; COLOR: #800000">I realised I could only end the stigma I faced by fighting it myself...today, those who feared me see me as a teacher and a source of information</B><IMG height=18 alt="''" src="http://www.eafricainfocus.com/wp-content/uploads/quotclosePN.jpg" align=absMiddle border=0> </TD>
+            </TR>
+        </TBODY>
+</TABLE>
+
+
+
+Midland Mortgage
+5505.70
+553.50
+T 1539.89
+I 2748.65
+Susan SSN: 637-68-8277
+
+310291691
+hacmp
+hpsa
+
+los colinas
+
+3649.00
+
+Client perspective.
+-------------------
+Client buys cards
+Client uses card on internet to buy products or services.
+or
+Client calls customer service to buy products and services.
+Merchant gets order information.
+Merchant ships products or provides services.
+
+Merchant perspective.
+---------------------
+Merchant registers with AfricaPay and gets an account number.
+Merchant places code snippet on website to allow payment through website.
+Merchant receives notifications of orders and payments from website.
+Merchant provides services or products.
+
+Settlement perspective
+----------------------
+Retailer receives cards. 
+Retailer sells cards.
+Retailer deposits funds to payment centre account.
+Client uses cards.
+Funds transfered from payment centre account to merchant account.
+Merchant withdraws funds or check sent after 30 days.
+
+18055 franjo rd.
+perrine.
+
+20800 sw 167th ave.
+miami.
+
+3052300945
+
+36291
+
+Link Media
+
+Susan Real Estate
+Interest: 2,749.00 <-- 	 Midland Mortgage Co.
+Taxes: 1,540.00
+
+brook...
+9727781863 - office
+2148504510 - cell
+
+6869 --> Timewarner cable internet pin
+
+
+//moze-fedora10 IN      CNAME   ns1.localdomain.
+//mail  IN      CNAME   ns1.localdomain.
+//www   IN      CNAME   ns1.localdomain.
+
+
+
+6500 campus circle E
+zip 75063
+
+29 th March 10:00 am
+201 E. Frank Ave.
+luskin
+936-634-6900
+
+tel wade, christiansan 2818709002 23rd march. 4:30 pm.
+
+Order number 2520
+8:30 am
+
+(972) 881-8885 <-- Pizza hut
+
+429-014-6278222106 <-- Moses Maina
+429-014-6278222114 <-- Njeri Kariuki
+
+www.karisanmedia.com <-- local
+Username: admin
+Password: letmein1
+
+
+http://www.karisanmedia.com/wp-content/uploads/2010/03/Aaron-Copland-Greatest-Hits-Aaron-Copland-Rodeo-selections-from-the-complete-ballet-Hoedown.mp3
+
+l3tm31n9
+
+http://www.karisanmedia.com/wp-content/uploads/2010/03/Rev.Dr_.Kimuyu.wmv
+
+.;C:\Program Files\Java\jre6\lib\ext\QTJava.zip
+C:\Program Files\Java\jdk1.6.0_18
+%CommonProgramFiles%\Microsoft Shared\Windows Live;C:\XEClient\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;C:\Program Files (x86)\QuickTime\QTSystem\;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;D:\Moses\Libs\Java\android-sdk-windows-1.5_r3\tools;C:\Program Files\Java\jdk1.6.0_18\bin;C:\jboss-5.1.0.GA-jdk6\bin;D:\Moses\Libs\Java\android-sdk-windows\tools;C:\OracleODBCClient;%SystemRoot%\System32\Windows System Resource Manager\bin;
+
+Old Environment Variables - 03-26-2010
+C:\Sun\SDK\jdk
+%CommonProgramFiles%\Microsoft Shared\Windows Live;C:\XEClient\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;C:\Program Files (x86)\QuickTime\QTSystem\;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;D:\Moses\Libs\Java\android-sdk-windows-1.5_r3\tools;C:\Sun\SDK\jdk\bin;C:\jboss-5.1.0.GA\bin;D:\Moses\Libs\Java\android-sdk-windows\tools;C:\OracleODBCClient;%SystemRoot%\System32\Windows System Resource Manager\bin;
+
+http://www.karisanmedia.com/wp-content/themes/pressplay/images/rss.png
+http://www.karisanmedia.com/images/my_radio.png
+http://www.karisanmedia.com/images/my_radio.png
+<img src="<?php bloginfo('template_directory'); ?>/images/my_radio.png" />
+
+Karisan Media - LinkSky account.
+u: sueerik
+p: l3tm31n9
+
+eb5.elearn.ihost.com/cc/voc550.html
+
+Linksky - Karisan media Wordpress Config.
+DB_NAME = sueerik_WPKarisan
+DB_USER = sueerik_karisan
+DB_PASSWORD = [!RDmN;7FR=B
+
+0G@h$NbLjfo2
+
+Aloft Hotel
+6853 N. Dallas Pkwy.
+Plano, 75024
+10:00 pm Sato.
+
+Loft 610
+
+RIGHT TO REPRESENT:
+I, Moses M. Maina , give Object Information Services (OIS) the exclusive right to
+represent me for the following opportunity even if my resume has been
+submitted to this client for this position by another agency, with or
+without my knowledge. I also abide by the rates that I/my employer have
+indicated and will not go back on the same after my resume has been
+submitted to the Client unless the Client requests for a negotiation
+           
+Client                                :  American Airlines �AAJP00001225 J2EE Websphere Admin - Dallas
+
+Location                              : Fort worth, Texas -76155
+
+
+Signature
+
+Moses M. Maina__________________________
+
+Cindy - Ascendant
+budforge, rasw,
+
+Michael Treasure Email: 
+
+kenyamart ftp account
+u:kenyamartftp
+p:kenyamart!1
+
+webhost4life.com login account.
+u: mwarari
+p: Letmein9!
+
+batian@kenyamart.com
+p:batian99
+
+
+447477881614
+815443
+
+hsbc
+18005385814x169
+
+Jason krohnr
+
+9727676700
+
+
+6869<--
+
+210629<---TW conf. no.
+81556443<-Dell no.
+4177771533416
+
+800-762-3786
+
+career connection
+dallas parkway &wallnut
+near presbeterian
+every tuesdays & thursdays 8:30 am.
+vistaprint.com $9.00 for 1000 cards
+
+texas workforce
+training
+
+5122976940 Jason Crossview
+
+
+
+8009362198
+0031039910
+Confirmation: 9591601 --> 2711.00
+2925.62
+
+
+Robert Kinyua - rkinyua@hotmail.com - 4695566952 - Systems Manager - Assurant
+Franic Opore - francisopore@yahoo.com - 4045185441 - Snr. Manager - TreasureCom Inc.
+Michael Treasure - michael@treasurecom.com - 5613010001 - CEO - TreasureCom Inc.
+
+9.00 am.
+James ruther
+
+513-763-8454
+Great American
+Crop Insurance...
+Kevin
+Steve
+sheryl
+
+Phil - vp...fossil...
+dollatel...
+
+Gotham Roy
+
+pmauro@encore-c.com
+254722797446
+
+
+8472220244x222
+
+sib
+siteminder
+
+7708342055
+
+david
+3178107558
+
+brandon
+
+913-4249840
+
+Portal and Websphere passwords.
+===============================
+Portal 61 on fedora10 admin. u:wpsroot p:letmein
+WAS for portal 61 on fedora10 admin console: u:wpsroot p:letmein
+WAS 61 on fedora10 admin console. u:wasroot p:letmein
+
+db2 u:dasusr1 p:letmein1 group:dasadm1
+Instance owner: u:db2inst1 p:letmein1 group:db2iadm1
+Fenced user: u:db2fenc1 p:letmein1 group:db2fadm1
+
+American Airlines Phone Interview
+Dial In:  877-873-8018 
+Code:  6154724 
+
+SAN=Storage Area Network
+NAS=Network Attached Storage
+
+Dan Martin
+
+Oracle 10.2.x XE
+u: SYS or SYSTEM
+p: letmein1
+
+Websphere Community Edition
+u: system
+p: letmein
+06-08-2010
+OLDPATH=%CommonProgramFiles%\Microsoft Shared\Windows Live;C:\Program Files (x86)\Embarcadero\RAD Studio\7.0\bin;C:\Users\Public\Documents\RAD Studio\7.0\Bpl;C:\XEClient\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Java\jdk1.6.0_18\bin;C:\jboss-5.1.0.GA-jdk6\bin;D:\Moses\Libs\Java\android-sdk-windows\tools;%SystemRoot%\System32\Windows System Resource Manager\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Sun\SDK\jdk\bin;C:\Program Files (x86)\Embarcadero\Delphi Prism\bin;C:\Python26;C:\Program Files (x86)\Rational\common;
+PATH=PATH=%CommonProgramFiles%\Microsoft Shared\Windows Live;C:\Program Files (x86)\Embarcadero\RAD Studio\7.0\bin;C:\Users\Public\Documents\RAD Studio\7.0\Bpl;C:\XEClient\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Java\jdk1.6.0_18\bin;C:\jboss-5.1.0.GA-jdk6\bin;D:\Moses\Libs\Java\android-sdk-windows\tools;%SystemRoot%\System32\Windows System Resource Manager\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Embarcadero\Delphi Prism\bin;C:\Python26;C:\Program Files (x86)\Rational\common;
+
+jdbc:oracle:thin:@moze-fedora10:1521:XE
+oracle.jdbc.driver.OracleDriver
+StoreValueCardsUser
+letmein1
+
+<nature>com.genuitec.myeclipse.icefaces.icefacesnature</nature>
+<nature>com.genuitec.eclipse.jsf.jsfnature</nature>
+
+7148572002
+
+Bank of America
+18006690102
+252.10<--06/10/2010
+738274P
+
+Matrix
+9727781835
+
+7329867683
+
+2012270088x12
+
+2-3
+
+4-5
+
+7 nodes prod
+WAS 4-6.1
+aix - ibm hardware
+oracle
+ihs
+f5
+siteminder
+
+org.eclipse.gmf.xpand.editor 2.0.0.v20090520-1343
+
+Shiv Armani
+
+9724897885
+
+8665701818 336
+
+
+972-489-7885
+American Airlines 
+4333 Among Carter Blvd HQ 1 
+FW TX 76155 
+
+Waste Management
+Larry Trencher
+7133945213
+Allan Reynolds
+Kiki 
+Shiva 
+
+18778751912
+
+Amazon EC2 - Karisan Media Admin Password: RzwWPb6HQE)
+
+WIN-X73KLEX8DAU
+
+
+Google voince phone--> (972) 836-8091
+SigGate Phone--> (415) 727-0822
+
+184.72.240.90
+
+Bosco
+214-886-2723
+
+Deut 25:11-12
+
+140.31
+
+8005509803
+2144408791
+8277
+299672811<-confirmation code.
+278.23<-balance
+
+careerbuilder.com
+p:l3tm31n9
+
+<!--
+              <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="659"
+                        height="270">
+                <param name="movie" value="SWF/home_banner2.swf">
+                <param name="quality" value="high">
+                <param name="wmode" value="opaque">
+                <param name="swfversion" value="6.0.65.0">
+                <-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don�t want users to see the prompt. -->
+                <param name="expressinstall" value="SWF/expressInstall.swf">
+                <-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                <--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="SWF/home_banner2.swf" width="659"
+                            height="270">
+                  <--<![endif]-->
+                  <param name="quality" value="high">
+                  <param name="wmode" value="opaque">
+                  <param name="swfversion" value="6.0.65.0">
+                  <param name="expressinstall" value="SWF/expressInstall.swf">
+                  <-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+                  <div>
+                    <h4> Content on this page requires a newer version of Adobe Flash Player.</h4>
+                    <p> <a href="http://www.adobe.com/go/getflashplayer"> <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"
+                                            alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+                  </div>
+                  <--[if !IE]>-->
+                </object>
+                <--<![endif]-->
+              </object>
+              -->
+              
+1010046867445
+006706432              
+
+8007239418->ext 169 ->hsbc
+
+401k.com 
+u: mwarari
+pin: 678910
+
+Metformin with Walgreens card.
+113-
+10.99
+
+Diovan
+130
+109
+
+
+Octber 20th -> Wangu - Gachanja's daughter.
+
+p.o. box 24093 00100 -> Caro's address in city square
+
+Assurant Credentials
+u: ts0667
+p: Mganga51
+
+Polycap Birica
+4694466351
+
+TMobile: SamSung mobile phone.
+OrderNo: 171100813
+Payment Order: 200731430
+
+<bean:write name="countries" property="secondaryCurrency.currencyName" />
+
+Register for free....
+Ask users to enter their payment option during ordering. (visa mastercard paypal.)
+Ask to filter the resuls
+setup ftp site where the users can upload their files.
+Get percentages for videos.
+
+Dell PowerEdge R210 II Ultra-compact Rack Server - 4gbRAM and 500gb Hard disk
+
+180051112265 - Wells Fargo
+
+8179315892
+919447656919
+
+jupiter1001
+kpvm3d1a
+
+spreaker.com
+
+comfortkdr
+
+Ruger Promo Code: P2C1006351X
+
+2121544 - $136.00 Frontier
+
+
+305.52 Venetia Gardens account.
+
+Create a self signed cert in Windows
+====================================
+$cert = New-SelfSignedCertificate -certstorelocation cert:\localmachine\my -dnsname services.duaraservices.com
+$pwd = ConvertTo-SecureString -String ‘Letmein9’ -Force -AsPlainText
+$path = 'cert:\localMachine\my\' + $cert.thumbprint 
+Export-PfxCertificate -cert $path -FilePath E:\Moses\SSL-Certs\Self-Signed\services.duaraservices.com.pfx -Password $pwd
+
+Import cert in cacerts for java
+===============================
+openssl pkcs12 -in whatever.pfx -out whatever.pem -clcerts -nokeys
+openssl x509 -in whatever.pem -inform PEM -out whatever.crt -outform DER
+Then use Keystore Explorer to import the crt file.
+<application android:icon="@drawable/icon" 
+             android:allowBackup="false"
+             android:usesCleartextTraffic="true"
+             android:networkSecurityConfig="@xml/network_security_config"
+             android:label="@string/app_name"
+             android:theme="@style/AppTheme"
+             android:persistent="true" >
+How to allow Android 9 to make http calls.
+===========================================
+Put in res/xml/network_security_config.xml:
+ <?xml version="1.0" encoding="utf-8"?>
+  <network-security-config>
+  <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">127.0.0.1</domain>
+    <domain includeSubdomains="true">localhost</domain>
+  </domain-config>
+  </network-security-config>
+
+  Add this entry in  Android.manifest:
+
+
+How to set default user for ubuntu on Windows 10
+================================================
+C:\Users\moze>ubuntu config --default-user mwarari
+
+Generating a self-signed certificates
+=====================================
+keytool -genkeypair -alias services.duaraservices.com -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore E:\Moses\SSL-Certs\Self-Signed\services.duaraservices.com.p12 -validity 3650
+keytool -genkeypair -dname "CN=Windows10-Laptop, O=Duara Servcies, C=US" -alias services.duaraservices.com -keyalg RSA -keysize 2048 -keystore E:\Moses\SSL-Certs\Self-Signed\Windows10-Laptop.p12 -validity 3650  -storetype PKCS12
+
+Delete a directory using WindowsPowerShell
+==========================================
+Remove-Item -LiteralPath "foldertodelete" -Force -Recurse
+
+Compress a path
+===============
+Compress-Archive -Path C:\Invoices -DestinationPath C:\Archives\Invoices
+
+How to reset internet connection Windows 10. (If you have npcap installed, uninstall it)
+========================================================================================
+netsh winsock reset
+netsh winhttp reset proxy
+netsh winhttp reset tracing
+netsh winsock reset catalog
+netsh int ipv4 reset catalog
+netsh int ipv6 reset catalog
+Then restart the PC
+
+valerie.eribarne@rcmi.com 
+- id
+- email or fax for apartment complex
+- 2 most recent paystubs
+
+Dump a mysql schema without data.
+=================================
+mysqldump -u duaraservicesusr -p --no-data -B duarapaymentsdb --routines --events --result-file=duarapaymentsdb-schema.sql
+
+** (appstreamcli:257): CRITICAL **: Error while moving old database out of the way.
+===================================================================================
+sudo touch /var/cache/app-info/xapian/default <--- solution
+
+Stan Druckenmiller
+The lords of finance.
+Antifragile
+
+
+
+theenclave@rcmi.com
