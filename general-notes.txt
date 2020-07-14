@@ -1861,6 +1861,74 @@ Stan Druckenmiller
 The lords of finance.
 Antifragile
 
+Creating a self-signed cert.
+============================
+$cert = New-SelfSignedCertificate -certstorelocation cert:\localmachine\my -dnsname services.duaraservices.com
+$pwd = ConvertTo-SecureString -String ‘Letmein9’ -Force -AsPlainText
+$path = 'cert:\localMachine\my\' + $cert.thumbprint 
+Export-PfxCertificate -cert $path -FilePath E:\Moses\SSL-Certs\Self-Signed\services.duaraservices.com.pfx -Password $pwd
 
+openssl pkcs12 -in whatever.pfx -out whatever.pem -clcerts -nokeys
+openssl x509 -in whatever.pem -inform PEM -out whatever.crt -outform DER
+Then use Keystore Explorer to import the crt file.
 
-theenclave@rcmi.com
+Create jar file for spring boot
+===============================
+mvn package spring-boot:repackage
+
+https://github.com/donnemartin/system-design-primer
+
+https://github.com/OutcoSF/prep_material
+
+http://hr.gs/outco-ogpb
+
+Dan Klos Co-Founder, Executive Director: https://www.linkedin.com/in/daklos/
+Ron Tsui Chief Technical Officer: https://www.linkedin.com/in/vokoshyv/
+Marissa Huang Outreach Manager: https://www.linkedin.com/in/huang-marissa/
+
+https://github.com/OutcoSF/prep_material
+https://www.outco.io/blog-page
+
+Customize Windows Terminal
+==========================
+https://www.hanselman.com/blog/HowToMakeAPrettyPromptInWindowsTerminalWithPowerlineNerdFontsCascadiaCodeWSLAndOhmyposh.aspx
+
+Updating ESXi
+=============
+Step 1: Enable SSH and connect to your ESXi host via Putty (or alternative)
+
+Step 2: Enable firewall rule (allow) for web traffic
+
+        esxcli network firewall ruleset set -e true -r httpClient
+
+Step 3: Run this command to see the VMware online depot and the different profiles you can upgrade from.
+
+        esxcli software sources profile list -d https://hostupdate.vmware.com/software/VUM/PRODUCTION/main/vmw-depot-index.xml | grep -i ESXi-6
+
+        to list available profiles. (or do just the same but with …”ESXi-6.5″ at the end of the command, to see just the 2 profiles corresponding to ESXi 6.5).
+
+Step 4: Run the upgrade with this command:
+
+        esxcli software profile update -p ESXi-6.5.0-20170702001-standard -d https://hostupdate.vmware.com/software/VUM/PRODUCTION/main/vmw-depot-index.xml
+
+Step 5: Re-enable the firewall with this command:
+
+        esxcli network firewall ruleset set -e false -r httpClient
+
+        Reboot the host to complete the upgrade > Exit the Maintenance mode. We're done.
+
+NOTES: If you get "Vmware Esxi Update No Space Left On Device Error" error, enable swap on the host then run the command again.
+
+Shapeways for 3d printing.
+
+Fix for Raspberry Pi losing wifi after a while. All you need to do is...
+------------------------------------------------------------------------
+sudo iw dev wlan0 set power_save off
+
+Fix problem setting sharing desktop on Ubuntu.
+----------------------------------------------
+(without sudo) gsettings set org.gnome.Vino require-encryption false
+
+Connect your Sony bluetooth headphones using aptX codec.
+========================================================
+sudo defaults write bluetoothaudiod "Enable AptX codec" -bool true
