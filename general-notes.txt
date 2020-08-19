@@ -1932,3 +1932,192 @@ Fix problem setting sharing desktop on Ubuntu.
 Connect your Sony bluetooth headphones using aptX codec.
 ========================================================
 sudo defaults write bluetoothaudiod "Enable AptX codec" -bool true
+
+Configure tmux to start automatically on login.
+===============================================
+Add this to ~/.bash_profile
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
+
+Enable and disable chef server on boot
+======================================
+chef-server-ctl uninstall
+chef-server-ctl reconfigure
+
+Splunk config.
+==============
+./splunk start --accept-license
+./splunk add forward-server <host name or ip address>:<listening port>
+sudo ./splunk add monitor /var/log
+[sudo] $SPLUNK_HOME/bin/splunk enable boot-start -systemd-managed 1
+sudo systemctl start SplunkForwarder
+
+
+Load links faster using js
+==========================
+<script scr="http://unpkg.com/turbolinks"></script>
+
+Store git credentials and not ask for them again
+================================================
+git config --global credential.helper store
+
+Laravel pre-req. php installs.
+==============================
+ssh-keygen -t -b 2048
+ssh -i SpeedCapital-KP-EC2-DEV.pem ubuntu@54.163.239.10
+sudo apt install expect
+sudo apt install apache2
+sudo apt install mysql-client
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt install php
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'e5325b19b381bfd88ce90a5ddb7823406b2a38cff6bb704b0acc289a09c8128d4a8ce2bbafcd1fcbdc38666422fe2806') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+php composer.phar
+mkdir -p /usr/local/bin
+mv composer.phar /usr/local/bin
+sudo apt install -y php-bcmath
+sudo apt install -y php-ctype
+sudo apt install -y php-fileinfo
+sudo apt install -y php-json
+sudo apt install -y php-mbstring
+sudo apt install -y php-openssl
+sudo apt install -y php-pdo
+sudo apt install -y php-tokenizer
+sudo apt install -y php-xml
+sudo apt install -y php-zip
+sudo apt install -y php7.4-mysql
+
+curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt install nodejs
+sudo apt update
+sudo apt upgrade
+sudo a2enmod rewrite
+sudo systemctl restart apache2
+--------------------
+<Directory /var/www/dev.speedcapital.com>
+           AllowOverride All
+</Directory>
+--------------------
+
+sudo apt update
+sudo apt install phpmyadmin php-mbstring php-gettext
+sudo phpenmod mbstring
+sudo systemctl restart apache2
+apt install ssmtp
+curl https://raw.githubusercontent.com/google/shaka-player/master/build/install-linux-prereqs.sh | bash
+
+pravatar.cc
+zondicons.com
+
+Keep Zypps name but use a different brand name.
+Contractual agreement period.
+Pilot of min 3 months and max  6 months.
+min 750 on board, 2000 riders, 
+Access to the back end for reports and stats to stake holders.
+Terms of reference for marketing...pricing (rules).
+
+speed-capital-dev.cc6s3gbj3pcl.us-east-1.rds.amazonaws.com
+
+
+# This is a basic workflow that is triggered when a merge request or push is made 
+# directly into the develop branch.
+
+
+name: Deploy site to aws dev site.
+on:
+  push:
+    branches:
+        - develop
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  pullFromRemoteDevelop:
+    name: Pull mainsite from develop 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: fifsky/ssh-action@master
+        with:
+          command: /home/ubuntu/bin/pull-from-git.sh
+          host: ${{ secrets.HOST }}
+          user: ubuntu
+          key: ${{ secrets.PRIVATE_KEY}}
+
+
+          $peedcapital20201!
+
+
+rtmp://34.232.230.54:1935/stream1/a
+rtmp://18.209.148.104:1935/stream2/b
+
+rtp://54.159.213.113:5000	54.159.213.113	5000
+rtp://54.80.113.205:5000	54.80.113.205	5000	
+
+http://6mtchsh24jlu6c.data.mediastore.us-east-1.amazonaws.com/livea/main.m3u8
+
+robot.txt
+ssl for speedcapital
+
+Expire objects in media store container
+=======================================
+{
+    "rules": [
+        {
+            "definition": {
+                "path": [
+                    {"wildcard": "Program/*.ts"} <-- container and wildcard for objects
+                ],
+                "days_since_create": [
+                    {"numeric": [ ">", 5 ]} <-- expiry date in days.
+                ]
+            },
+            "action": "EXPIRE"
+        }
+    ]
+}
+
+
+To keep myphpadmin up to date
+=============================
+sudo add-apt-repository ppa:phpmyadmin/ppa
+
+Using PHP to upload objects to AWS S3
+=====================================
+
+composer require aws/aws-sdk-php
+
+<?php
+	if(isset($_FILES['image'])){
+		$file_name = $_FILES['image']['name'];   
+		$temp_file_location = $_FILES['image']['tmp_name']; 
+
+		require 'vendor/autoload.php';
+
+		$s3 = new Aws\S3\S3Client([
+			'region'  => '-- your region --',
+			'version' => 'latest',
+			'credentials' => [
+				'key'    => "-- access key id --",
+				'secret' => "-- secret access key --",
+			]
+		]);		
+
+		$result = $s3->putObject([
+			'Bucket' => '-- bucket name --',
+			'Key'    => $file_name,
+			'SourceFile' => $temp_file_location			
+		]);
+
+		var_dump($result);
+	}
+?>
+
+<form action="<?= $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">         
+	<input type="file" name="image" />
+	<input type="submit"/>
+</form>
+
+
