@@ -2121,3 +2121,238 @@ composer require aws/aws-sdk-php
 </form>
 
 
+sudo chmod g+rw mainsite/
+sudo chown -R ubuntu:www-data mainsite
+
+http://www.speedcapital.us/public/media/uploaded_data/1595042482.jpeg
+http://www.speedcapital.us/public/media/uploaded_data/1595550581.jpeg
+
+problem solving methodology.
+behaviours to problem solving
+repeatable process
+think about how to use the tools you have
+
+Optimal solution with minimum supervision
+Ask the right questions
+Be intentional in your process.
+
+Asked the right questions
+Asked examples
+Talked bout solution
+implemented working solution
+
+
+Technical interviewing 101
+reacto
+
+Changem3N0w!
+$peedcapital2021!
+
+7est4Accoun7
+speedcap1talteam
+APILogin: 3uhDR8wyA6Z
+Transaction Key: 3UgX3kjg8Q8y2u22
+Key: Simon
+
+
+Outlook for Mac Not Working: Freezes or Crashes, Fix
+====================================================
+- Restart your Mac.
+- Update your Mac.
+- Open terminal and enter the following command and press ENTER.
+  defaults write com.microsoft.Outlook DisablePreviewForSMIME 1
+
+- Now enter the following command and press ENTER.
+  killall cfprefsd
+
+
+  - Take notes. VERY IMPORTANT
+  - Use examples. VERY IMPORTANT
+  - Dont get quiet.
+  - Restitance to suggestion is bad.
+  - Check your code after you write it. Line by line.
+  - Understand the question. 
+  - Write simple code.
+  - Create your own examples.
+  - 
+
+Make laravel use https:// instead of http:// in production
+==========================================================
+Add the following to /app/Providers/AppServiceProvider.php file...
+
+if(config('app.env') === 'production') {
+            \URL::forceScheme('https');
+        }
+
+
+Installing efs-utils on ubuntu
+==============================
+git clone https://github.com/aws/efs-utils
+sudo apt-get -y install binutils
+
+Build the package with the following command: ./build-deb.sh
+
+Install the package using the following command: sudo apt-get -y install ./build/amazon-efs-utils*deb
+
+Mount EFS for www.speedcapital.us
+=================================
+sudo mount -t efs fs-2d8202af:/www.speedcapital.us/ /var/www/www.speedcapital.us/
+
+Add the following entry to /etc/
+
+877-507-6369 x4520 <--- AAA promo
+
+Minimum edit distance
+=====================
+Replace Remove
+Insert  You are here
+
+Dyanamic problem steps
+======================
+1. Define objective function
+  f(i) is the number of distinct ways to get to the i-th step.
+2. Identify base cases
+  f(0) = 1
+  f(1) = 1
+3. Recurrence Relation or transition function
+  f(n) = f(n-1) + f(n-2)
+4. Order of computation
+  bottom-up
+5. Location of answer.
+
+Force git to pull the current branch from Remote
+================================================
+git fetch --all
+git reset --heard origin/<branch>
+
+Laravel Clear cache
+===================
+php artisan cache:clear
+php artisan route:clear
+php artisan config:clear
+php artisan view:clear
+
+In Laravel if you get the error "Target class does {...} does not exist, do this:
+=================================================================================
+php artisan config:cache
+composer dump-autoload
+
+Update ESXi
+===========
+esxcli software profile update -p ESXi-6.5.0-20200504001-standard -d https://hostupdate.vmware.com/software/VUM/PRODUCTION/main/vmw-depot-index.xml
+
+Clear Linux dns cache
+=====================
+sudo systemd-resolve --flush-caches
+
+How to merge video files using VLC
+==================================
+{vlc_location} video1.mp4 video2.mp4 --sout "#gather:std{access=file,dst=final_file_name.mp4}" --sout-keep
+
+
+If you get an error that you cannot mount an ntfs volume in LINUX do this:
+==========================================================================
+sudo apt-get install ntfs-3g
+
+Check what version of raspberry Pi you have
+===========================================
+sudo cat /sys/firmware/devicetree/base/model;echo
+
+Setting up raspberry pi to use vpn as a client
+==============================================
+Follow instructions here: https://www.privateinternetaccess.com/helpdesk/guides/linux/linux-installing-openvpn-through-the-terminal 
+and use the file https://www.privateinternetaccess.com/openvpn/openvpn-tcp.zip
+
+sudo iptables -A OUTPUT -p udp --dport 1198 -j ACCEPT
+sudo iptables -A INPUT -p udp --sport 1198 -j ACCEPT
+
+sudo apt-get install iptables-persistent -y
+sudo netfilter-persistent save
+sudo systemctl enable netfilter-persistent
+
+How to check your external ip address from commandline (Linux)
+==============================================================
+curl icanhazip.com
+
+
+How to get the UUID for a disk in linux.
+========================================
+blkid /dev/vda1
+blkid /dev/vda1 -sUUID -ovalue
+To mount in fstab add -> "UUID=2139859F6CF14F78    /mnt/usbDriveA ntfs defaults 0 0"
+
+How to get the temperature of a raspberry pi
+============================================
+vcgencmd measure_temp
+
+How to enable and disable an apache2 module
+===========================================
+sudo a2enmod rewrite
+sudo a2dismod rewrite
+
+
+Install driver for 3.5 inch raspberry pi LCD touch screen
+=========================================================
+http://www.lcdwiki.com/Main_Page#Raspberry_Pi_HDMI_Display
+
+Ubuntu make the text console default:
+=====================================
+sudo systemctl enable multi-user.target
+sudo systemctl set-default multi-user.target
+
+"C:\Program Files (x86)\VideoLAN\VLC\vlc.exe"
+
+/dev/sda1    /mnt/usbDriveA nfts defaults 0 0
+
+Gomes Eanes de Zurara
+
+- Close Terminal
+- Restart Mac
+- Open Outlook and Test
+
+949-304-1793
+
+Shane Coker, Cheyanne Giles
+Rome
+Switzerland
+Italy
+Cancel before May 1 2021
+- Venice canals
+- Neuschwanstein
+- Munich Olympic Stadium
+- Lake Lucern
+
+$101.4 bi weekly
+$203 monthly
+$3945 with $95 deposit. $300 discount before Next Tuesday 10/13
+June 2, 2022 to June 19, 2022
+www.eftours.com/2419115DF <-- enrolmment page 
+bit.ly/Cocker2022
+6 spots guaranteed.
+
+
+# Allow loopback device (internal communication)
+sudo iptables -A INPUT -i lo -j ACCEPT
+sudo iptables -A OUTPUT -o lo -j ACCEPT
+
+#Allow all local traffic.
+sudo iptables -A INPUT -s 192.168.0.0/24 -j ACCEPT
+sudo iptables -A OUTPUT -d 192.168.0.0/24 -j ACCEPT
+
+# Allow VPN establishment
+# Only 2 ports open, 1 for DNS and 1 for VPN
+# If establishing thru an IP and not a name, the ones with port 53 can be removed
+# Port 1198 may be different depending on the VPN
+sudo iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
+sudo iptables -A INPUT -p udp --sport 53 -j ACCEPT
+sudo iptables -A OUTPUT -p udp --dport 1198 -j ACCEPT
+sudo iptables -A INPUT -p udp --sport 1198 -j ACCEPT
+
+#Accept all TUN connections (tun = VPN tunnel)
+sudo iptables -A OUTPUT -o tun+ -j ACCEPT
+sudo iptables -A INPUT -i tun+ -j ACCEPT
+
+#Set default policies to drop all communication unless specifically allowed
+sudo iptables -P INPUT DROP
+sudo iptables -P OUTPUT DROP
+sudo iptables -P FORWARD DROP
