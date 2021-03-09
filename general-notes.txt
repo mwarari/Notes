@@ -2223,7 +2223,7 @@ Dyanamic problem steps
 Force git to pull the current branch from Remote
 ================================================
 git fetch --all
-git reset --heard origin/<branch>
+git reset --hard origin/<branch>
 
 Laravel Clear cache
 ===================
@@ -2300,6 +2300,76 @@ Ubuntu make the text console default:
 sudo systemctl enable multi-user.target
 sudo systemctl set-default multi-user.target
 
+Get Laravel version
+===================
+php artisan --version
+
+SES check suppressed email list
+===============================
+aws sesv2 list-suppressed-destinations
+
+Get Today's Julian Date
+=======================
+date +%j
+
+Copy ssh key to remove host
+===========================
+ssh-copy-id -i {key} {user}@{host}
+
+Follow log files using systemd for a unit (Prefered way)
+=========================================
+journalctl -u {unit name} (eg. journalctl -u ssh)
+journalctl -uf {unit name} <-- to follow the log file.
+
+Check if ubuntu or Debian needs to be rebooted
+===============================================
+cat /var/run/reboot-required
+
+How to check the filesystem on a block device on linux
+======================================================
+lsblk --fs
+
+VS-Code - github token
+======================
+vscode://vscode.github-authentication/did-authenticate?windowid=1&code=46840889dc02ceb4db13&state=8aa5be90-57f5-4044-8707-c3adcf725076
+
+Maven clean/urge local repository
+=================================
+mvn dependency:purge-local-repository -DactTransitively=false -DreResolve=false
+
+Regular Expressions
+===================
+.       - Any Character Except New Line
+\d      - Digit (0-9)
+\D      - Not a Digit (0-9)
+\w      - Word Character (a-z, A-Z, 0-9, _)
+\W      - Not a Word Character
+\s      - Whitespace (space, tab, newline)
+\S      - Not Whitespace (space, tab, newline)
+
+\b      - Word Boundary
+\B      - Not a Word Boundary
+^       - Beginning of a String
+$       - End of a String
+
+[]      - Matches Characters in brackets
+[^ ]    - Matches Characters NOT in brackets
+|       - Either Or
+( )     - Group
+
+Quantifiers:
+*       - 0 or More
++       - 1 or More
+?       - 0 or One
+{3}     - Exact Number
+{3,4}   - Range of Numbers (Minimum, Maximum)
+
+letsencrypt certficate renewal.
+===============================
+ sudo certbot certonly --force-renew -d fuml.us -d *.fuml.us
+ {Then option 2}
+
+ 
 "C:\Program Files (x86)\VideoLAN\VLC\vlc.exe"
 
 /dev/sda1    /mnt/usbDriveA nfts defaults 0 0
@@ -2356,3 +2426,21 @@ sudo iptables -A INPUT -i tun+ -j ACCEPT
 sudo iptables -P INPUT DROP
 sudo iptables -P OUTPUT DROP
 sudo iptables -P FORWARD DROP
+
+
+786 258 3393 <-- Colleen
+
+
+I had an excellent experience. He did an excellent job painting my condo. I told him what I was looking for and what I expected at the end. He  took the initiative to look into what is required to get the job done. He took the time and got more help where needed. He also helped in installation of frames and doors. He was able to get the necessary personnel to do the job as required. I was exceptionally pleased with his work. 
+I call on him and recommend him to anybody else who needs his expertise. 
+Excellent Work HANDYMAN.
+
+sudo mount -t efs -o tls,accesspoint=fsap-07c879f7af5d1d5ce fs-35316dc0:/www.speedcapital.com/mainsite/public/ /mnt/efs
+
+
+fs-35316dc0:/www.speedcapital.com/mainsite/public/ /var/www/www.speedcapital.com/mainsite/public efs _netdev,tls,accesspoint=fsap-07c879f7af5d1d5ce 0 0
+
+fs-208cf058:/www.fuml.net/trackregistration/public/ /var/www/html/trackregistration/public efs _netdev,tls,accesspoint=fsap-02aec175340046833 0 0
+
+
+sudo mount -t efs -o tls,accesspoint=fsap-02aec175340046833 fs-208cf058:/www.fuml.net/trackregistration/public /var/www/html/trackregistration/public
