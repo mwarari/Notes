@@ -2228,7 +2228,6 @@ git reset --hard origin/<branch>
 Laravel Clear cache
 ===================
 php artisan cache:clear
-php artisan route:clear
 php artisan config:clear
 php artisan view:clear
 
@@ -2369,6 +2368,22 @@ letsencrypt certficate renewal.
  sudo certbot certonly --force-renew -d fuml.us -d *.fuml.us
  {Then option 2}
 
+Git remove an already tracked file
+==================================
+git rm --cached <file>
+git rm -r --cached <folder>
+
+1. commit pending changes first 
+2. git rm --cached <file> or git rm -r --cached <folder> and commit again 
+3. add the file to .gitignore, check with git status and commit again
+4. on the other servers or repos, make a backup of the file to be ignored
+5. do a git pull (this will remove the now untracked file(s))
+6. restore the files to be ignored.
+
+
+https://qft.hodloo.com/ <-- crypto trading base site.
+
+009191532940
  
 "C:\Program Files (x86)\VideoLAN\VLC\vlc.exe"
 
@@ -2444,3 +2459,6 @@ fs-208cf058:/www.fuml.net/trackregistration/public/ /var/www/html/trackregistrat
 
 
 sudo mount -t efs -o tls,accesspoint=fsap-02aec175340046833 fs-208cf058:/www.fuml.net/trackregistration/public /var/www/html/trackregistration/public
+
+tickets@fuml.net
+support@fuml.net
